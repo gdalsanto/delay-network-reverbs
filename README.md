@@ -40,8 +40,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | B. Alary, A. Politis, S. J. Schlecht & V. Välimäki. "Directional feedback delay network." AES: Journal of the Audio Engineering Society. | 2019 | .. | .. | .. | .. | 
 | B. Alary, & A. Politis, "Frequency-dependent Directional feedback delay network." In: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). | 2020 | .. | .. | .. | .. |
 | **Machine Learning Optimization** 
-| Giampiccolo, R., Mezza, A. I., & Bernardini, A. "Differentiable MIMO Feedback Delay Networks for Multichannel Room Impulse Response Modeling," In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 278-285). | 2024 | .. | .. | .. | .. | 
-| Giampiccolo, R., Mezza, A. I., Pezzoli, M., Koyama, S., Bernardini, A., & Antonacci, F., "Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187). | 2025 | .. | .. | .. | .. | 
+| Giampiccolo, R., Mezza, A. I., & Bernardini, A. "Differentiable MIMO Feedback Delay Networks for Multichannel Room Impulse Response Modeling," In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 278-285). | 2024 | Extends the author's previous work to MIMO FDNs. | .. | .. | .. | 
+| Giampiccolo, R., Mezza, A. I., Pezzoli, M., Koyama, S., Bernardini, A., & Antonacci, F., "Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187). | 2025 | Presents a novel loss function to optimize FDNs and learn the energy distribution in space, as well as in the time-frequency domain. | .. | .. | Online [audio examples](https://polimi-ispl.github.io/hom-dfdn/) available | 
 | .. | .. | .. | .. | .. | .. | 
 
 ### Toolboxes and libraries
@@ -60,7 +60,7 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | .. | .. | .. | .. | .. | .. | 
 | .. | .. | .. | .. | .. | .. | 
 | **Machine Learning Optimization**
-| Mezza, A. I., Riccardo G., and Alberto B., "Differentiable Scattering Delay Networks for Artificial Reverberation." Proceedings of the International Conference on Digital Audio Effects (DAFx25). 2025. | 2025 | .. | .. |
+| Mezza, A. I., Riccardo G., and Alberto B., "Differentiable Scattering Delay Networks for Artificial Reverberation." Proceedings of the International Conference on Digital Audio Effects (DAFx25). 2025. | 2025 | Presents a methodology for the optimization of SDN parameters to account for variability in geometry and/or floor plan and match the time-frequency decay of sound energy. | .. |
 | .. | .. | .. | .. | .. | .. | 
 
 ## Early Reverbs and FDN Theory
