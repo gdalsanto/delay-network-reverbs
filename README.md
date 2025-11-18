@@ -30,7 +30,7 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | Mezza, A. I., Giampiccolo, R., & Bernardini, A. (2024). Modeling the frequency-dependent sound energy decay of acoustic environments with differentiable feedback delay networks. In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 238-245). | 2024 | Parameter optimization | Extends the author's previous work to frequency-dependent FDNs. | .. | .. |
 | Dal Santo, G., Prawda, K., Schlecht, S. J., and Välimäki, V. "Optimizing tiny colorless feedback delay networks," EURASIP Journal on Audio, Speech, and Music Processing, 2025(1), 13. | 2025 | Parameter optimization | Improved the previous colorless FDN work by making the optimization iFFT-free. | [diff-fdn-colorless](https://github.com/gdalsanto/diff-fdn-colorless/tree/main) Python| Online [audio examples](http://research.spa.aalto.fi/publications/papers/eurasip-colorless-fdn/) available | (GitHub) 
 | I. Ibnyahya, and J. Reiss. "Differentiable Attenuation Filters for Feedback Delay Networks." 28th International Conference on Digital Audio Effects (DAFx25), 2025. | 2025 | Attenuation filters optimization | Optimization of a parameteric equilizer to reduce the number of required second-order sections. | [irr_match](https://github.com/ilias-audio/iir_match) Python| ..
-| Götz, P., Santo, G. D., Schlecht, S. J., Välimäki, V., & Habets, E. A. (2025). Matching Reverberant Speech Through Learned Acoustic Embeddings and Feedback Delay Networks. arXiv preprint arXiv:2510.23158. | Under review | Parameter estimation | Present a parameter estimation network to solve the reverberant signal matching task with a differentiable FDN. | .. | Online [audio examples](https://www.audiolabs-erlangen.de/resources/2026-ICASSP-RMS) available  
+| Götz, P., Dal Santo, G., Schlecht, S. J., Välimäki, V., & Habets, E. A. (2025). Matching Reverberant Speech Through Learned Acoustic Embeddings and Feedback Delay Networks. arXiv preprint arXiv:2510.23158. | Under review | Parameter estimation | Present a parameter estimation network to solve the reverberant signal matching task with a differentiable FDN. | .. | Online [audio examples](https://www.audiolabs-erlangen.de/resources/2026-ICASSP-RMS) available  
 
 ### **FDNs for Spatial Audio**
 | **Reference** | **Year** | **Content Type** | **Main Contributions** | **Code** | **Notes** |
@@ -63,7 +63,7 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | Mezza, A. I., Riccardo G., and Alberto B., "Differentiable Scattering Delay Networks for Artificial Reverberation." Proceedings of the International Conference on Digital Audio Effects (DAFx25). 2025. | 2025 | .. | .. |
 | .. | .. | .. | .. | .. | .. | 
 
-## Early Reverbs
+## Early Reverbs and FDN Theory
 | **Reference** | **Year** | **Notes** |
 | :------------------------ | :--------------: |  :-------------- | 
 | M. R. Schroeder and B. F. Logan. "Colorless artificial reverberation." J. Audio Eng. Soc. | 1961 | Cascade of allpass filters |
@@ -75,12 +75,15 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | W. G. Gardner. "The virtual acoustic room." Master's thesis, MIT. | 1992 | Diffuse reverberators for small/medium/large rooms, based on nested allpass filters |
 | J.-M. Jot and A. Chaigne. "Digital delay networks for designing artificial reverberators." Proc. 90th Conv. Audio Eng. Soc. |1991 | Introduces the concept of delay-proportionalattenuation filters |
 | J.-M. Jot. "An Analysis/synthesis approach to real-time artificial reverberation." Proc. ICASSP. | 1992 | Explains how to design attenuation and tone corrector filters from a target RIR |
-| J. Dattorro. "Effect design, part 1: Reverberator and other filters." J. Audio Engineering Society. | 1997 | Tutorial-like paper with complete design, coefficient values and practical insights |
+| J. Dattorro. "Effect design, part 1: Reverberator and other filters." J. Audio Engineering Society. | 1997 | Tutorial-like paper with complete design, coefficient values and practical insights | 
+| D. Rocchesso and J. O. Smith III, “Circulant and elliptic feedback delay networks for artificial reverberation,” IEEE Trans. Speech, Audio Process., vol. 5, no. 1, pp. 51–63, 1997. | 1997 | Shows that lossless FDNs can be achieved by any feedback matrix having unit-modulus eigenvalues and linearly independent eigenvectors. Presents the circulant matrix, for efficent implementations.  Note that eq (29) is flawed, as noted in the Appendix of S. J. Schelcht's PhD thesis 
+| D. Rocchesso, “Maximally diffusive yet efficient feedback delay networks for artificial reverberation,” IEEE Signal Process. Lett., vol. 4, no. 9, pp. 252 – 255, 1997. | 1997 | Uses Galois sequences arranged in a circulant matrix to produce a maximum echo density in the time response. 
 | .. | .. | .. |
 
 
 ### Other resources
 
+- "Artificial Reverberation" chapter of Miller Puckette's Theory and Techniques of Electronic Music [book](https://msp.ucsd.edu/techniques/latest/book-html/node111.html) (December 2006)
 - "Efficient Reverb Rendering for Auditory Scenes" by Jean Marc Jot [DAFx17 Tutorial](https://youtu.be/C_bxtks51-A?si=x_BPDsJtgBdcPDL5)
 - Sean Costello's "Getting started with reverb design" [ValhallaDSP blog](https://valhalladsp.com/2021/09/22/getting-started-with-reverb-design-part-2-the-foundations/). 
 - "Let's Write a Reverb" by Geraint Luff  [ADC 21](https://youtu.be/6ZK2Goiyotk?si=XysVxnFTHcDsqNJV)
