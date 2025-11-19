@@ -4,6 +4,13 @@ A curated list of papers and code on delay-network-based artificial reverberatio
 
 Note: This repository has been made public on Friday, November 14th, 2025. You should expect it to grow in the following days. 
 
+### Toolboxes and libraries
+| **Reference** | **Description** |  **language** | **Repository** |
+| :------------------------ | :--------------: |  :--------------: |  :--------------: | 
+| S. J. Schlecht. "FDNTB: The feedback delay network toolbox." International Conference on Digital Audio Effects (DAFx), 2020. | Comprehensive FDN toolbox: special feedback matrices, topologies, attenuation filters, modal decomposition and examples. | Matlab | [fdnToolbox](https://github.com/SebastianJiroSchlecht/fdnToolbox) | 
+| G. Dal Santo, G. M. De Bortoli, K. A. Prawda, S. Schlecht, & V. Välimäki. "FLAMO: An Open-Source Library for Frequency-Domain Differentiable Audio Processing." (ICASSP 2025). | Frequency-domain differentiable audio processing. Contains differentiable implementations of common LTI audio modules with learnable parameters. | PyTorch | [flamo](https://github.com/gdalsanto/flamo) | 
+| G. Dal Santo, K. A. Prawda, S. Schlecht, & V. Välimäki. "FLARE: An Open-Source Library for RIR Synthesis and Analysis in PyTorch." (AES AI/ML for Audio, 2025). | Room Impulse Response synthesis and Analysis in PyTorch (based on FLAMO). Contains classes for differentiable FDN and grouped FDN implementations. | PyTorch | [flare](https://github.com/gdalsanto/flare) |
+
 ## **Feedback Delay Networks** 
 | **Reference** | **Year** | **Content Type** | **Main Contributions** | **Code** | **Notes** |
 | :------------------------ | :--------------: | :------------------ | :------------------ | :-------------------------------- | :-------------------------------------------------------- | 
@@ -44,12 +51,6 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | R. Giampiccolo, A. I. Mezza, M. Pezzoli, S. Koyama, A. Bernardini, and F. Antonacci, "Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187). | 2025 | Presents a novel loss function to optimize FDNs and learn the energy distribution in space, as well as in the time-frequency domain. | .. | .. | Online [audio examples](https://polimi-ispl.github.io/hom-dfdn/) available | 
 | .. | .. | .. | .. | .. | .. | 
 
-### Toolboxes and libraries
-| **Reference** | **Description** |  **language** | **Repository** |
-| :------------------------ | :-------------- |  :--------------: |  :--------------: | 
-| S. J. Schlecht. "FDNTB: The feedback delay network toolbox." International Conference on Digital Audio Effects (DAFx), 2020. | Comprehensive FDN toolbox: special feedback matrices, topologies, attenuation filters, modal decomposition and examples. | Matlab | [fdnToolbox](https://github.com/SebastianJiroSchlecht/fdnToolbox) | 
-| G. Dal Santo, G. M. De Bortoli, K. A. Prawda, S. Schlecht, & V. Välimäki. "FLAMO: An Open-Source Library for Frequency-Domain Differentiable Audio Processing." (ICASSP 2025). | Frequency-domain differentiable audio processing. Contains differentiable implementations of common LTI audio modules with learnable parameters. | PyTorch | [flamo](https://github.com/gdalsanto/flamo) | 
-| G. Dal Santo, K. A. Prawda, S. Schlecht, & V. Välimäki. "FLARE: An Open-Source Library for RIR Synthesis and Analysis in PyTorch." (AES AI/ML for Audio, 2025). | Room Impulse Response synthesis and Analysis in PyTorch (based on FLAMO). Contains classes for differentiable FDN and grouped FDN implementations. | PyTorch | [flare](https://github.com/gdalsanto/flare) |
 
 ## Scattering Delay Networks
 | **Reference** | **Year** | **Parameter Design** | **Application** | **Code** | **Notes** |
