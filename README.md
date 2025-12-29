@@ -106,7 +106,7 @@ Last edit to the list on December 29th. 2025.
 - "Artificial Reverberation" chapter of Miller Puckette's Theory and Techniques of Electronic Music [book](https://msp.ucsd.edu/techniques/latest/book-html/node111.html) (December 2006)
 - "Efficient Reverb Rendering for Auditory Scenes" by Jean Marc Jot [DAFx17 Tutorial](https://youtu.be/C_bxtks51-A?si=x_BPDsJtgBdcPDL5)
 - Sean Costello's "Getting started with reverb design" [ValhallaDSP blog](https://valhalladsp.com/2021/09/22/getting-started-with-reverb-design-part-2-the-foundations/). 
-- "On reverb design" Talk by Sean Costello about the history of artificial reverberators and how S. Costello designs a reverb algorithm. [Talk](https://www.youtube.com/watch?v=aJLhqfHrwsw&t=2744s) (March 2019) 
+- "On reverb design" Talk by Sean Costello about the history of artificial reverberators and how he designs a reverb algorithm. [Talk](https://www.youtube.com/watch?v=aJLhqfHrwsw&t=2744s) (March 2019) 
 - "Designing the Make Noise Erbe-Verb - Reverb Design Lecture" by Tom Erbe [Lecture at UCSB](www.youtube.com/watch?v=Il_qdtQKnqk) (2019)
 - "Let's Write a Reverb" by Geraint Luff  [ADC 21](https://youtu.be/6ZK2Goiyotk?si=XysVxnFTHcDsqNJV)
 - "Feedback Delay Networks for Artificial Reverberation" by Sebastian J. Schlecht [CCRMA seminars 22](https://youtu.be/gRiZX7C6zJo?si=FlxqVlEkYb_WVqQE)
