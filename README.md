@@ -2,16 +2,30 @@
 
 A curated list of papers and code on delay-network-based artificial reverberation. This repository collects references and implementations for Feedback Delay Networks (FDN) and Scattering Delay Networks (SDN). It is a living resource and will be updated as new work appears.
 
-Note: This repository has been made public on Friday, November 14th, 2025. You should expect it to grow in the following days. 
+Made public on Friday, November 14th, 2025.   
+Last edit to the list on December 29th. 2025.
 
-### Toolboxes and libraries
+## Contents
+- [Toolboxes and libraries](#toolboxes-and-libraries)
+- [Feedback Delay Networks](#feedback-delay-networks)
+- [Feedback Delay Networks for Spatial Audio](#fdns-for-spatial-audio)
+- [Scattering Delay Networks](#scattering-delay-networks)
+- [Early Reverbs and FDN Theory](#early-reverbs-and-fdn-theory)
+- [Other resources](#other-resources)
+- [Acknowledgements](#acknowledgements)
+- [Contributing](#contributing)
+
+
+<a id="toolboxes-and-libraries"></a>
+### 🔧 Toolboxes and libraries
 | **Reference** | **Description** |  **language** | **Repository** |
 | :------------------------ | :--------------: |  :--------------: |  :--------------: | 
 | S. J. Schlecht. "**FDNTB: The feedback delay network toolbox.**" International Conference on Digital Audio Effects (DAFx), 2020. | Comprehensive FDN toolbox: special feedback matrices, topologies, attenuation filters, modal decomposition and examples. | Matlab | [fdnToolbox](https://github.com/SebastianJiroSchlecht/fdnToolbox) | 
 | G. Dal Santo, G. M. De Bortoli, K. A. Prawda, S. Schlecht, & V. Välimäki. "**FLAMO: An Open-Source Library for Frequency-Domain Differentiable Audio Processing.**" (ICASSP 2025). | Frequency-domain differentiable audio processing. Contains differentiable implementations of common LTI audio modules with learnable parameters. | PyTorch | [flamo](https://github.com/gdalsanto/flamo) | 
 | G. Dal Santo, K. A. Prawda, S. Schlecht, & V. Välimäki. "**FLARE: An Open-Source Library for RIR Synthesis and Analysis in PyTorch.**" (AES AI/ML for Audio, 2025). | Room Impulse Response synthesis and Analysis in PyTorch (based on FLAMO). Contains classes for differentiable FDN and grouped FDN implementations. | PyTorch | [flare](https://github.com/gdalsanto/flare) |
 
-## **Feedback Delay Networks** 
+<a id="feedback-delay-networks"></a>
+### 📝 **Feedback Delay Networks** 
 | **Reference** | **Content Type** | **Main Contributions** | **Notes** |
 | :------------------------ | :------------------ | :------------------ | :-------------------------------------------------------- | 
 | M. Chemistruck, K. Marcolini, & W. Pirkle. "**Generating matrix coefficients for feedback delay networks using genetic algorithm.**" Proceedings of the 133rd Audio Engineering Society Convention, 2012. | Parameter estimation | Uses a genetic algorithm to generate or optimize feedback matrix coefficients for FDNs to improve reverberation characteristics. | .. |
@@ -39,7 +53,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | I. Ibnyahya, and J. Reiss. "**Differentiable Attenuation Filters for Feedback Delay Networks.**" 28th International Conference on Digital Audio Effects (DAFx25), 2025. | Attenuation filters optimization | Optimization of a parameteric equilizer to reduce the number of required second-order sections. | [irr_match](https://github.com/ilias-audio/iir_match) Python |
 | Götz, P., Dal Santo, G., Schlecht, S. J., Välimäki, V., & Habets, E. A. (2025). **Matching Reverberant Speech Through Learned Acoustic Embeddings and Feedback Delay Networks.** arXiv preprint arXiv:2510.23158 (Under review). | Parameter estimation | Present a parameter estimation network to solve the reverberant signal matching task with a differentiable FDN. | Online [audio examples](https://www.audiolabs-erlangen.de/resources/2026-ICASSP-RMS) available |
 
-### **FDNs for Spatial Audio**
+<a id="fdns-for-spatial-audio"></a>
+### 📝 **FDNs for Spatial Audio**
 | **Reference** | **Content Type** | **Main Contributions** | **Notes** |
 | :------------------------ | :------------------ | :------------------ | :-------------------------------------------------------- | 
 | J. Anderson and S. Costello. "**Adapting artificial reverberation architectures for B‑format signal processing.**" Proc. Ambisonics Symposium (Graz, Austria), 2009. | .. | .. | .. | 
@@ -52,7 +67,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | .. | .. | .. | .. | .. | .. | 
 
 
-## Scattering Delay Networks
+<a id="scattering-delay-networks"></a>
+### 📝 Scattering Delay Networks
 | **Reference** | **Parameter Design** | **Application** | **Notes** |
 | :------------------------ | :------------------ | :------------------ | :-------------------------------------------------------- | 
 | E. De Sena, H. Hacıhabiboğlu, and Z. Cvetković, "**Scattering Delay Network: An Interactive Reverberator for Computer Games,**" in Proc. 41st AES International Conference: Audio for Games, London, UK, February 2011. | Informed | .. | .. |
@@ -65,7 +81,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | A. I. Mezza, R. Giampiccolo, E. De Sena, and A. Bernardini, "**Differentiable Scattering Delay Networks for Artificial Reverberation.**" Proceedings of the International Conference on Digital Audio Effects (DAFx25), 2025. | Informed and optimized | .. | Code available [here](https://github.com/ilic-mezza/differentiable-sdn). Presents a methodology for the optimization of SDN parameters to account for variability in geometry and/or floor plan and match the time-frequency decay of sound energy. |
 | .. | .. | .. | .. | .. | .. | 
 
-## Early Reverbs and FDN Theory
+<a id="early-reverbs-and-fdn-theory"></a>
+### 📝 Early Reverbs and FDN Theory
 | **Reference** | **Year** | **Notes** |
 | :------------------------ | :--------------: |  :-------------- | 
 | M. R. Schroeder and B. F. Logan. "**Colorless artificial reverberation.**" J. Audio Eng. Soc. | 1961 | Cascade of allpass filters |
@@ -83,7 +100,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 | .. | .. | .. |
 
 
-### Other resources
+<a id="other-resources"></a>
+### 📚 Other resources
 
 - "Artificial Reverberation" chapter of Miller Puckette's Theory and Techniques of Electronic Music [book](https://msp.ucsd.edu/techniques/latest/book-html/node111.html) (December 2006)
 - "Efficient Reverb Rendering for Auditory Scenes" by Jean Marc Jot [DAFx17 Tutorial](https://youtu.be/C_bxtks51-A?si=x_BPDsJtgBdcPDL5)
@@ -97,7 +115,8 @@ Note: This repository has been made public on Friday, November 14th, 2025. You s
 
 
 
-### Acknowledgements
+<a id="acknowledgements"></a>
+### 🤝 Acknowledgements
 
 This list is largely inspired by:
 
@@ -105,7 +124,8 @@ This list is largely inspired by:
 - B. Alary. "Analysis and Synthesis of Directional Reverberation" (PhD thesis, Aalto University, 2021).
 - V. Välimäki, J. D. Parker, L. Savioja, J. O. Smith, & J. S. Abel. "Fifty years of artificial reverberation" (IEEE TASLP, 2012).
 
-## Contributing
+<a id="contributing"></a>
+## 🫶 Contributing
 
 Contributions are welcome! Thank you for helping keep this list up to date. The easiest flow for adding references is:
 
