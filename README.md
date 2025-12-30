@@ -3,13 +3,16 @@
 A curated list of papers and code on delay-network-based artificial reverberation. This repository collects references and implementations for Feedback Delay Networks (FDN) and Scattering Delay Networks (SDN). It is a living resource and will be updated as new work appears.
 
 Made public on Friday, November 14th, 2025.   
-Last edit to the list on December 29th. 2025.
+Last edit to the list on December 30th. 2025.
 
 ## Contents
 - [Toolboxes and libraries](#toolboxes-and-libraries)
 - [Feedback Delay Networks](#feedback-delay-networks)
+    - [ML optimiation](#fdn-ml)
 - [Feedback Delay Networks for Spatial Audio](#fdns-for-spatial-audio)
+    - [ML optimiation](#dir-fdn-ml)
 - [Scattering Delay Networks](#scattering-delay-networks)
+    - [ML optimiation](#sdn-ml)
 - [Early Reverbs and FDN Theory](#early-reverbs-and-fdn-theory)
 - [Other resources](#other-resources)
 - [Acknowledgements](#acknowledgements)
@@ -43,7 +46,7 @@ Last edit to the list on December 29th. 2025.
 | S. J. Schlecht, J. Fagerström, and V. Välimäki. "**Decorrelation in Feedback Delay Networks.**" IEEE/ACM Trans. Audio Speech Lang. Process., 2023. | Theory and Analysis | Analysis of multichannel correlation induced by FDNs | .. | 
 | S. J. Schlecht, M. Scerbo, E. De Sena and V. Välimäki, "**Modal Excitation in Feedback Delay Networks,**" in IEEE Signal Processing Letters, vol. 31, pp. 2690-2694, 2024. | Analysis | Presents a method for computing modal shapes of an FDN having a large order and a moderate number of delay lines. | .. |
 | V. Välimäki, K. Prawda, and S. J. Schlecht. "**Two-Stage Attenuation Filter for Artificial Reverberation.**" IEEE Signal Processing Letters, 2024. | Informed design of attenuation filters | SOTA design consisting of a first-order low-shelf filter and one-third-octave GEQ | [Two_stage_filter](https://github.com/KPrawda/Two_stage_filter) Matlab. Uses the [J. Liski's GEQ](https://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_94.pdf) |
-| **Machine Learning Optimization**
+| **Machine Learning Optimization** <a id="fdn-ml"></a>
 | S. Lee, H. S. Choi, Lee K., "**Differentiable artificial reverberation.**" IEEE/ACM Transactions on Audio, Speech, and Language Processing 30: 2541-2556, 2022. | Parameter estimation | Presents a differentiable FDN, along with differentiable Filtered Velvet Noise. Introduces a parameter estimation network for analysis-synthesis and blind estimation task in an end-to-end manner. | [Unofficial implementation](https://github.com/gdalsanto/diff-delay-net) Python. First of its kind. Online [audio examples](https://sh-lee97.github.io/DAR-samples/) available. | 
 | G. Dal Santo, K. Prawda, S. J. Schlecht, and V. Välimäki. "**Differentiable Feedback Delay Network for colorless reverberation.**" International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, Sept. 4-7, 2023. | Parameter optimization | Optimize the gain parameters of the FDN to reduce metallic artifacts and increase temporal density. Using this optimization allows the redeuction of the number of channels needed for a smooth response. | [diff-fdn-colorless](https://github.com/gdalsanto/diff-fdn-colorless/tree/dafx23) (dafx23 branch) Python. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx23-colorless-fdn/) available. |
 | Dal Santo, G., Alary, B., Prawda, K., Schlecht, S., & Välimäki, V. **RIR2FDN: An improved room impulse response analysis and synthesis.** In International Conference on Digital Audio Effects (pp. 230-237), 2024. University of Surrey. | Informed design + Parameter optimization | Present a pipeline to design a smooth-sounding FDN to match a given RIR. Evaluates the results with a perceptual study. | [rir2fdn](https://github.com/gdalsanto/rir2fdn) Python + Matlab filter design. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx24-rir2fdn/) available. Now this approach |  
@@ -61,7 +64,7 @@ Last edit to the list on December 29th. 2025.
 | S. J. Schlecht and E. A. P. Habets. "**Sign-Agnostic Matrix Design for Spatial Artificial Reverberation with Feedback Delay Networks.**" 2018. | .. | .. | .. | 
 | B. Alary, A. Politis, S. J. Schlecht & V. Välimäki. "**Directional feedback delay network.**" AES: Journal of the Audio Engineering Society, 2019. | .. | .. | .. | 
 | B. Alary, & A. Politis, "**Frequency-dependent Directional feedback delay network.**" In: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020. | .. | .. | .. |
-| **Machine Learning Optimization** 
+| **Machine Learning Optimization** <a id="dir-fdn-ml"></a>
 | R. Giampiccolo, A. I. Mezza, and A. Bernardini, "**Differentiable MIMO Feedback Delay Networks for Multichannel Room Impulse Response Modeling,**" In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 278-285), 2024. | Extends the author's previous work to MIMO FDNs. | .. | .. | 
 | R. Giampiccolo, A. I. Mezza, M. Pezzoli, S. Koyama, A. Bernardini, and F. Antonacci, "**Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks**", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187), 2025. | Presents a novel loss function to optimize FDNs and learn the energy distribution in space, as well as in the time-frequency domain. | .. | Online [audio examples](https://polimi-ispl.github.io/hom-dfdn/) available | 
 | .. | .. | .. | .. | .. | .. | 
@@ -77,7 +80,7 @@ Last edit to the list on December 29th. 2025.
 | L. Vinceslas, M. Scerbo, H. Hacıhabiboğlu, Z. Cvetković & E. De Sena. "**Low-Complexity Higher Order Scattering Delay Networks.**" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). | .. | .. | .. | 
 | .. | .. | .. | .. | .. | .. | 
 | .. | .. | .. | .. | .. | .. | 
-| **Machine Learning Optimization**
+| **Machine Learning Optimization** <a id="sdn-ml"></a>
 | A. I. Mezza, R. Giampiccolo, E. De Sena, and A. Bernardini, "**Differentiable Scattering Delay Networks for Artificial Reverberation.**" Proceedings of the International Conference on Digital Audio Effects (DAFx25), 2025. | Informed and optimized | .. | Code available [here](https://github.com/ilic-mezza/differentiable-sdn). Presents a methodology for the optimization of SDN parameters to account for variability in geometry and/or floor plan and match the time-frequency decay of sound energy. |
 | .. | .. | .. | .. | .. | .. | 
 
