@@ -3,16 +3,16 @@
 A curated list of papers and code on delay-network-based artificial reverberation. This repository collects references and implementations for Feedback Delay Networks (FDN) and Scattering Delay Networks (SDN). It is a living resource and will be updated as new work appears.
 
 Made public on Friday, November 14th, 2025.   
-Last edit to the list on December 30th. 2025.
+Last edit to the list on December 30th, 2025.
 
 ## Contents
 - [Toolboxes and libraries](#toolboxes-and-libraries)
 - [Feedback Delay Networks](#feedback-delay-networks)
-    - [ML optimiation](#fdn-ml)
+    - [ML optimization](#fdn-ml)
 - [Feedback Delay Networks for Spatial Audio](#fdns-for-spatial-audio)
-    - [ML optimiation](#dir-fdn-ml)
+    - [ML optimization](#dir-fdn-ml)
 - [Scattering Delay Networks](#scattering-delay-networks)
-    - [ML optimiation](#sdn-ml)
+    - [ML optimization](#sdn-ml)
 - [Early Reverbs and FDN Theory](#early-reverbs-and-fdn-theory)
 - [Other resources](#other-resources)
 - [Acknowledgements](#acknowledgements)
@@ -46,33 +46,35 @@ Last edit to the list on December 30th. 2025.
 | S. J. Schlecht, J. Fagerström, and V. Välimäki. "**Decorrelation in Feedback Delay Networks.**" IEEE/ACM Trans. Audio Speech Lang. Process., 2023. | Theory and Analysis | Analysis of multichannel correlation induced by FDNs | .. | 
 | S. J. Schlecht, M. Scerbo, E. De Sena and V. Välimäki, "**Modal Excitation in Feedback Delay Networks,**" in IEEE Signal Processing Letters, vol. 31, pp. 2690-2694, 2024. | Analysis | Presents a method for computing modal shapes of an FDN having a large order and a moderate number of delay lines. | .. |
 | V. Välimäki, K. Prawda, and S. J. Schlecht. "**Two-Stage Attenuation Filter for Artificial Reverberation.**" IEEE Signal Processing Letters, 2024. | Informed design of attenuation filters | SOTA design consisting of a first-order low-shelf filter and one-third-octave GEQ | [Two_stage_filter](https://github.com/KPrawda/Two_stage_filter) Matlab. Uses the [J. Liski's GEQ](https://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_94.pdf) |
+|
 | **Machine Learning Optimization** <a id="fdn-ml"></a>
 | S. Lee, H. S. Choi, Lee K., "**Differentiable artificial reverberation.**" IEEE/ACM Transactions on Audio, Speech, and Language Processing 30: 2541-2556, 2022. | Parameter estimation | Presents a differentiable FDN, along with differentiable Filtered Velvet Noise. Introduces a parameter estimation network for analysis-synthesis and blind estimation task in an end-to-end manner. | [Unofficial implementation](https://github.com/gdalsanto/diff-delay-net) Python. First of its kind. Online [audio examples](https://sh-lee97.github.io/DAR-samples/) available. | 
-| G. Dal Santo, K. Prawda, S. J. Schlecht, and V. Välimäki. "**Differentiable Feedback Delay Network for colorless reverberation.**" International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, Sept. 4-7, 2023. | Parameter optimization | Optimize the gain parameters of the FDN to reduce metallic artifacts and increase temporal density. Using this optimization allows the redeuction of the number of channels needed for a smooth response. | [diff-fdn-colorless](https://github.com/gdalsanto/diff-fdn-colorless/tree/dafx23) (dafx23 branch) Python. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx23-colorless-fdn/) available. |
-| Dal Santo, G., Alary, B., Prawda, K., Schlecht, S., & Välimäki, V. **RIR2FDN: An improved room impulse response analysis and synthesis.** In International Conference on Digital Audio Effects (pp. 230-237), 2024. University of Surrey. | Informed design + Parameter optimization | Present a pipeline to design a smooth-sounding FDN to match a given RIR. Evaluates the results with a perceptual study. | [rir2fdn](https://github.com/gdalsanto/rir2fdn) Python + Matlab filter design. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx24-rir2fdn/) available. Now this approach |  
+| G. Dal Santo, K. Prawda, S. J. Schlecht, and V. Välimäki. "**Differentiable Feedback Delay Network for colorless reverberation.**" International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, Sept. 4-7, 2023. | Parameter optimization | Optimize the gain parameters of the FDN to reduce metallic artifacts and increase temporal density. Using this optimization allows the reduction of the number of channels needed for a smooth response. | [diff-fdn-colorless](https://github.com/gdalsanto/diff-fdn-colorless/tree/dafx23) (dafx23 branch) Python. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx23-colorless-fdn/) available. |
+| Dal Santo, G., Alary, B., Prawda, K., Schlecht, S., & Välimäki, V. **RIR2FDN: An improved room impulse response analysis and synthesis.** In International Conference on Digital Audio Effects (pp. 230-237), 2024. University of Surrey. | Informed design + Parameter optimization | Present a pipeline to design a smooth-sounding FDN to match a given RIR. Evaluates the results with a perceptual study. | [rir2fdn](https://github.com/gdalsanto/rir2fdn) Python + Matlab filter design. Online [audio examples](http://research.spa.aalto.fi/publications/papers/dafx24-rir2fdn/) available. |  
 | A. I. Mezza, R. Giampiccolo, E. De Sena, and A. Bernardini. **Data-driven room acoustic modeling via differentiable feedback delay networks with learnable delay lines.** EURASIP Journal on Audio, Speech, and Music Processing, 2024(1), 51. | Parameter optimization | Presents a method for optimizing FDN parameters in the time domain. Introduces the echo density profile loss and the optimization of delay lines along with the other FDN parameters. | .. |
 | A. I. Mezza, R. Giampiccolo, and A. Bernardini, **Modeling the frequency-dependent sound energy decay of acoustic environments with differentiable feedback delay networks.** In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 238-245), 2024. | Parameter optimization | Extends the author's previous work to frequency-dependent FDNs. | .. |
 | Dal Santo, G., Prawda, K., Schlecht, S. J., and Välimäki, V. "**Optimizing tiny colorless feedback delay networks,**" EURASIP Journal on Audio, Speech, and Music Processing, 2025(1), 13. | Parameter optimization | Improved the previous colorless FDN work by making the optimization iFFT-free. | [diff-fdn-colorless](https://github.com/gdalsanto/diff-fdn-colorless/tree/main) Python. Online [audio examples](http://research.spa.aalto.fi/publications/papers/eurasip-colorless-fdn/) available (GitHub) |
-| I. Ibnyahya, and J. Reiss. "**Differentiable Attenuation Filters for Feedback Delay Networks.**" 28th International Conference on Digital Audio Effects (DAFx25), 2025. | Attenuation filters optimization | Optimization of a parameteric equilizer to reduce the number of required second-order sections. | [irr_match](https://github.com/ilias-audio/iir_match) Python |
+| I. Ibnyahya, and J. Reiss. "**Differentiable Attenuation Filters for Feedback Delay Networks.**" 28th International Conference on Digital Audio Effects (DAFx25), 2025. | Attenuation filters optimization | Optimization of a parametric equalizer to reduce the number of required second-order sections. | [irr_match](https://github.com/ilias-audio/iir_match) Python |
 | Götz, P., Dal Santo, G., Schlecht, S. J., Välimäki, V., & Habets, E. A. (2025). **Matching Reverberant Speech Through Learned Acoustic Embeddings and Feedback Delay Networks.** arXiv preprint arXiv:2510.23158 (Under review). | Parameter estimation | Present a parameter estimation network to solve the reverberant signal matching task with a differentiable FDN. | Online [audio examples](https://www.audiolabs-erlangen.de/resources/2026-ICASSP-RMS) available |
 
 <a id="fdns-for-spatial-audio"></a>
 ### 📝 **FDNs for Spatial Audio**
 | **Reference** | **Content Type** | **Main Contributions** | **Notes** |
 | :------------------------ | :------------------ | :------------------ | :-------------------------------------------------------- | 
-| J. Anderson and S. Costello. "**Adapting artificial reverberation architectures for B‑format signal processing.**" Proc. Ambisonics Symposium (Graz, Austria), 2009. | .. | .. | .. | 
-| S. J. Schlecht and E. A. P. Habets. "**Sign-Agnostic Matrix Design for Spatial Artificial Reverberation with Feedback Delay Networks.**" 2018. | .. | .. | .. | 
-| B. Alary, A. Politis, S. J. Schlecht & V. Välimäki. "**Directional feedback delay network.**" AES: Journal of the Audio Engineering Society, 2019. | .. | .. | .. | 
-| B. Alary, & A. Politis, "**Frequency-dependent Directional feedback delay network.**" In: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020. | .. | .. | .. |
+| J. Anderson and S. Costello. "**Adapting artificial reverberation architectures for B‑format signal processing.**" Proc. Ambisonics Symposium (Graz, Austria), 2009. | Perceptually motivated design | B-format spatial reverb. Early reflections are modeled using multiple cascaded delay stages, while late reverb is modeled using a delay network and a steering gain. | Core algorithm works in A-format, requiring B to A conversion at input. Has a lot of practical considerations. |
+| S. J. Schlecht and E. A. P. Habets. "**Sign-Agnostic Matrix Design for Spatial Artificial Reverberation with Feedback Delay Networks.**" AES Conf. on Spatial Reproduction, 2018. | Informed design, optimization | Method to design unilossless and spatially-aware feedback matrix. Has direct connections with SDN design. | Applications in aesthetic reverbs, coupled rooms, and SDN. Online [audio examples](https://www.audiolabs-erlangen.de/resources/2018-AES-SpatialFDN) and animations available. |
+| B. Alary, A. Politis, S. J. Schlecht & V. Välimäki. "**Directional feedback delay network.**" AES: Journal of the Audio Engineering Society, 2019. | Informed design | Uses multichannel delay lines in the Ambisonics domain with directional attenuation. A directional weighting matrix transform modifies the energy distribution over time. | .. | 
+| B. Alary, & A. Politis, "**Frequency-dependent Directional feedback delay network.**" In: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020. | Informed design | Uses multichannel delay lines encoded for a set of directions, together with direction and frequency dependent attenuation. | Simplifies the processing presented in the 2019 paper above. |
+|
 | **Machine Learning Optimization** <a id="dir-fdn-ml"></a>
-| R. Giampiccolo, A. I. Mezza, and A. Bernardini, "**Differentiable MIMO Feedback Delay Networks for Multichannel Room Impulse Response Modeling,**" In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 278-285), 2024. | Extends the author's previous work to MIMO FDNs. | .. | .. | 
-| R. Giampiccolo, A. I. Mezza, M. Pezzoli, S. Koyama, A. Bernardini, and F. Antonacci, "**Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks**", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187), 2025. | Presents a novel loss function to optimize FDNs and learn the energy distribution in space, as well as in the time-frequency domain. | .. | Online [audio examples](https://polimi-ispl.github.io/hom-dfdn/) available | 
+| R. Giampiccolo, A. I. Mezza, and A. Bernardini, "**Differentiable MIMO Feedback Delay Networks for Multichannel Room Impulse Response Modeling,**" In Proceedings of the 27th International Conference on Digital Audio Effects (DAFx24) (pp. 278-285), 2024. | .. | Extends the author's previous work to MIMO FDNs. | .. | 
+| R. Giampiccolo, A. I. Mezza, M. Pezzoli, S. Koyama, A. Bernardini, and F. Antonacci, "**Modeling the Impulse Response of Higher-Order Microphone Arrays using Differentiable Feedback Delay Networks**", In Proceedings of the International Conference on Digital Audio Effects (DAFx25) (pp. 180-187), 2025. | .. | Presents a novel loss function to optimize FDNs and learn the energy distribution in space, as well as in the time-frequency domain. | Online [audio examples](https://polimi-ispl.github.io/hom-dfdn/) available | 
 | .. | .. | .. | .. | .. | .. | 
 
 
 <a id="scattering-delay-networks"></a>
 ### 📝 Scattering Delay Networks
-| **Reference** | **Parameter Design** | **Application** | **Notes** |
+| **Reference** | **Content Type** | **Application** | **Notes** |
 | :------------------------ | :------------------ | :------------------ | :-------------------------------------------------------- | 
 | E. De Sena, H. Hacıhabiboğlu, and Z. Cvetković, "**Scattering Delay Network: An Interactive Reverberator for Computer Games,**" in Proc. 41st AES International Conference: Audio for Games, London, UK, February 2011. | Informed | .. | .. |
 | E. De Sena, H. Hacıhabiboğlu, Z. Cvetković & J. O. Smith. "**Efficient synthesis of room acoustics via scattering delay networks.**" IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2015. | Informed | .. | Code available [here](https://github.com/enzodesena/sdn-matlab) | 
@@ -80,6 +82,7 @@ Last edit to the list on December 30th. 2025.
 | L. Vinceslas, M. Scerbo, H. Hacıhabiboğlu, Z. Cvetković & E. De Sena. "**Low-Complexity Higher Order Scattering Delay Networks.**" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). | .. | .. | .. | 
 | .. | .. | .. | .. | .. | .. | 
 | .. | .. | .. | .. | .. | .. | 
+|
 | **Machine Learning Optimization** <a id="sdn-ml"></a>
 | A. I. Mezza, R. Giampiccolo, E. De Sena, and A. Bernardini, "**Differentiable Scattering Delay Networks for Artificial Reverberation.**" Proceedings of the International Conference on Digital Audio Effects (DAFx25), 2025. | Informed and optimized | .. | Code available [here](https://github.com/ilic-mezza/differentiable-sdn). Presents a methodology for the optimization of SDN parameters to account for variability in geometry and/or floor plan and match the time-frequency decay of sound energy. |
 | .. | .. | .. | .. | .. | .. | 
@@ -89,16 +92,16 @@ Last edit to the list on December 30th. 2025.
 | **Reference** | **Year** | **Notes** |
 | :------------------------ | :--------------: |  :-------------- | 
 | M. R. Schroeder and B. F. Logan. "**Colorless artificial reverberation.**" J. Audio Eng. Soc. | 1961 | Cascade of allpass filters |
-| M. R. Schroeder. "**Natural-sounding artificial reverberation.**" Journal of the Audio Engineering Society. | 1962 | Combination of parallel comb filters with series allpass filtes. Known as the **Schroeder reverb** |
+| M. R. Schroeder. "**Natural-sounding artificial reverberation.**" Journal of the Audio Engineering Society. | 1962 | Combination of parallel comb filters with series allpass filters. Known as the **Schroeder reverb** |
 | M. A. Gerzon. "**Synthetic stereo reverberation, parts I and II.**" Studio Sound. | 1971(I), 1972(II) | Feedback delay network - multichannel allpass reverberator | 
 | J. A. Moorer. "**About this reverberation business.**" Computer Music Journal. | 1979 | Introduces lowpass filters within comb filters to model high frequency damping. Uses a sparse FIR filter to model early reflections | 
 | J. Stautner and M. Puckette. "**Designing Multi-Channel Reverberators.**" Computer Music Journal. | 1982 | "Consolidates" Gerzon's reverb | 
 | W. G. Gardner. "**A real-time multichannel room simulator.**" J. Acoustical Society of America. | 1992 | Nested allpass filters |
 | W. G. Gardner. "**The virtual acoustic room.**" Master's thesis, MIT. | 1992 | Diffuse reverberators for small/medium/large rooms, based on nested allpass filters |
-| J.-M. Jot and A. Chaigne. "**Digital delay networks for designing artificial reverberators.**" Proc. 90th Conv. Audio Eng. Soc. |1991 | Introduces the concept of delay-proportionalattenuation filters |
+| J.-M. Jot and A. Chaigne. "**Digital delay networks for designing artificial reverberators.**" Proc. 90th Conv. Audio Eng. Soc. |1991 | Introduces the concept of delay-proportional attenuation filters |
 | J.-M. Jot. "**An Analysis/synthesis approach to real-time artificial reverberation.**" Proc. ICASSP. | 1992 | Explains how to design attenuation and tone corrector filters from a target RIR |
 | J. Dattorro. "**Effect design, part 1: Reverberator and other filters.**" J. Audio Engineering Society. | 1997 | Tutorial-like paper with complete design, coefficient values and practical insights | 
-| D. Rocchesso and J. O. Smith III, "**Circulant and elliptic feedback delay networks for artificial reverberation,**" IEEE Trans. Speech, Audio Process., vol. 5, no. 1, pp. 51–63, 1997. | 1997 | Shows that lossless FDNs can be achieved by any feedback matrix having unit-modulus eigenvalues and linearly independent eigenvectors. Presents the circulant matrix, for efficent implementations.  Note that eq (29) is flawed, as noted in the Appendix of S. J. Schelcht's PhD thesis
+| D. Rocchesso and J. O. Smith III, "**Circulant and elliptic feedback delay networks for artificial reverberation,**" IEEE Trans. Speech, Audio Process., vol. 5, no. 1, pp. 51–63, 1997. | 1997 | Shows that lossless FDNs can be achieved by any feedback matrix having unit-modulus eigenvalues and linearly independent eigenvectors. Presents the circulant matrix, for efficient implementations.  Note that eq (29) is flawed, as noted in the Appendix of S. J. Schlecht's PhD thesis
 | D. Rocchesso, "**Maximally diffusive yet efficient feedback delay networks for artificial reverberation,**" IEEE Signal Process. Lett., vol. 4, no. 9, pp. 252 – 255, 1997. | 1997 | Uses Galois sequences arranged in a circulant matrix to produce a maximum echo density in the time response.
 | .. | .. | .. |
 
@@ -140,7 +143,7 @@ Contributions are welcome! Thank you for helping keep this list up to date. The 
 
 Notes:
 
-- Avoid promotionalor non-technical text in entries; keep the list a factual resource.
+- Avoid promotional or non-technical entries; keep the list a factual resource.
 - By contributing, you confirm you have the right to share the bibliographic information and links you provide. 
 - We don't want this to become a tier list. Please try to be as objective as possible. 
 
