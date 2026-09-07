@@ -125,7 +125,7 @@ A curated list of papers and code on delay-network-based artificial reverberatio
 | :-- | :--: | :-- |
 | M. R. Schroeder & B. F. Logan. "**Colorless artificial reverberation.**" J. Audio Eng. Soc. | 1961 | Cascade of allpass filters. |
 | M. R. Schroeder. "**Natural-sounding artificial reverberation.**" J. Audio Eng. Soc. | 1962 | Parallel comb filters with series allpass filters. Known as the **Schroeder reverb**. |
-| M. A. Gerzon. "**Synthetic stereo reverberation, parts I and II.**" Studio Sound. | 1971 / 1972 | Feedback delay network — multichannel allpass reverberator. |
+| M. A. Gerzon. "**Synthetic stereo reverberation, parts I and II.**" Studio Sound. | 1971 / 1972 | Feedback delay network — multichannel allpass reverberator. Studio Sound [online archive](https://www.worldradiohistory.com/Archive-All-Audio/Studio-Sound.htm). |
 | J. A. Moorer. "**About this reverberation business.**" Computer Music Journal. | 1979 | Lowpass filters within comb filters to model high-frequency damping; sparse FIR filter for early reflections. |
 | J. Stautner & M. Puckette. "**Designing multi-channel reverberators.**" Computer Music Journal. | 1982 | "Consolidates" Gerzon's reverb. |
 | J.-M. Jot & A. Chaigne. "**Digital delay networks for designing artificial reverberators.**" 90th AES Convention. | 1991 | Introduces delay-proportional attenuation filters. |
