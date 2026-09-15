@@ -36,6 +36,7 @@ A curated list of papers and code on delay-network-based artificial reverberatio
 | G. Dal Santo, G. M. De Bortoli, K. A. Prawda, S. J. Schlecht, & V. Välimäki. "**FLAMO: An Open-Source Library for Frequency-Domain Differentiable Audio Processing.**" ICASSP, 2025. | Frequency-domain differentiable audio processing. Contains differentiable implementations of common LTI audio modules with learnable parameters. | PyTorch | [flamo](https://github.com/gdalsanto/flamo) |
 | G. Dal Santo, K. A. Prawda, S. J. Schlecht, & V. Välimäki. "**FLARE: An Open-Source Library for RIR Synthesis and Analysis in PyTorch.**" AES International Conference on AI and Machine Learning for Audio, 2025. | Room impulse response synthesis and analysis in PyTorch (built on FLAMO). Contains classes for differentiable FDN and grouped FDN implementations. | PyTorch | [flare](https://github.com/gdalsanto/flare) |
 | S. J. Schlecht, J. Bai, et al. "**pyFDN**", 2026 | Python library for designing, analyzing, and optimizing FDNs. | Python, PyTorch | [pyFDN](https://artificial-audio.github.io/pyFDN/index.html) |
+
 ---
 
 <a id="feedback-delay-networks"></a>
@@ -58,6 +59,7 @@ A curated list of papers and code on delay-network-based artificial reverberatio
 | S. J. Schlecht, J. Fagerström, & V. Välimäki. "**Decorrelation in Feedback Delay Networks.**" IEEE/ACM TASLP, 2023. | Theory and analysis | Analyzes the multichannel correlation induced by FDNs; shows it depends primarily on the feedforward paths, and that filter feedback matrices improve decorrelation. | — |
 | S. J. Schlecht, M. Scerbo, E. De Sena, & V. Välimäki. "**Modal Excitation in Feedback Delay Networks.**" IEEE Signal Processing Letters, vol. 31, pp. 2690–2694, 2024. | Theory and analysis | Method for computing modal shapes of an FDN of large order with a moderate number of delay lines; guides the choice of input/output points along the delay lines. | — |
 | V. Välimäki, K. Prawda, & S. J. Schlecht. "**Two-Stage Attenuation Filter for Artificial Reverberation.**" IEEE Signal Processing Letters, 2024. | Attenuation-filter design | State-of-the-art design combining a first-order low-shelf pre-filter with a one-third-octave GEQ. | [Two_stage_filter](https://github.com/KPrawda/Two_stage_filter) (Matlab). Uses [Liski's GEQ](https://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_94.pdf). |
+| G. Dal Santo, X. Pi, K. Prawda, S. Schlecht & V. Välimäki. **Shimmer Reverberation with Nonlinear Feedback Delay Networks.** DAFx, 2026. | Nonlinear design | Introduces five approaches for integrating nonlinear and time-varying operations into FDN feedback loops to generate stable and controllable shimmer reverberation effects. | - |
 
 <a id="fdn-ml"></a>
 ### 🤖 Machine learning optimization
@@ -74,6 +76,9 @@ A curated list of papers and code on delay-network-based artificial reverberatio
 | O. Das, G. Dal Santo, S. J. Schlecht, V. Välimäki, & Z. Cvetković. "**Differentiable Grouped Feedback Delay Networks for Learning Coupled Volume Acoustics.**" IEEE Trans. Audio Speech Lang. Process., vol. 34, 2026. | Parameter optimization | Differentiable GFDN trained on measured RIRs to match late-reverberation profiles of coupled-volume spaces; enables spatial interpolation and real-time parameter updates for XR. | arXiv:2508.06686. |
 | P. Götz, G. Dal Santo, S. J. Schlecht, V. Välimäki, & E. A. P. Habets. "**Matching Reverberant Speech Through Learned Acoustic Embeddings and Feedback Delay Networks.**" ICASSP, 2026. | Parameter estimation | Parameter-estimation network solving the reverberant-signal-matching task with a differentiable FDN, reproducing frequency-dependent decay and direct-to-reverberation ratio. | [Audio examples](https://www.audiolabs-erlangen.de/resources/2026-ICASSP-RMS). |
 | G. Dal Santo, K. Prawda, S. J. Schlecht, & V. Välimäki. "**Learning Filters in Feedback Delay Networks from Noisy Room Impulse Responses.**" Submitted to J. Audio Eng. Soc., 2026. | Attenuation-filter design | Noise-aware optimization of recursive attenuation filters when the target RIR contains background noise; guidelines for robust gradient-based tuning at low SNR. | Preprint. |
+| I. Ibnyahya & J. D. Reiss. "**Gradient Descent Optimization of Room Impulse Responses with Parameter-Efficient Differentiable Feedback Delay Networks**" DAFx, 2026. | Parameter estimation | Optimizes a fully differentiable FDN, jointly learning delay lengths, feedback matrix, early reflections, and proportional PEQ filters for accurate and efficient RIR matching. | [DiffReverb](https://github.com/ilias-audio/DAFX26_DiffReverb) (Python). |
+R. Giampiccolo, A. I. Mezza, G. Di Lorenzo, A. Bernardini & F. Antonacci. "**Learning Reverberation from Musical Recordings Using Differentiable Feedback Delay Networks**" IWAENC, 2026. | Parameter estimation | Optimizes differentiable FDNs directly from audio recordings rather than on RIRs. | — |
+
 
 ---
 
