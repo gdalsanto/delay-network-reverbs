@@ -2,7 +2,7 @@
 
 A curated list of papers and code on delay-network-based artificial reverberation. This repository collects references and implementations for Feedback Delay Networks (FDN) and Scattering Delay Networks (SDN). It is a living resource and will be updated as new work appears.
 
-*Made public on Friday, November 14th, 2025. Last edit to the list on August 29th, 2026.*
+*Made public on Friday, November 14th, 2025. Last edit to the list on October 22nd, 2026.*
 
 ## Contents
 
